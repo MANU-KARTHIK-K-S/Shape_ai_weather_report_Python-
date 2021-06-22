@@ -1,5 +1,5 @@
 import requests
-#import os
+
 from datetime import datetime
 
 api_key = '87d845b0b6cf29baa1a73cc34b067a95'
@@ -9,7 +9,6 @@ complete_api_link = "https://api.openweathermap.org/data/2.5/weather?q="+locatio
 api_link = requests.get(complete_api_link)
 api_data = api_link.json()
 
-#create variables to store and display data
 temp_city = ((api_data['main']['temp']) - 273.15)
 weather_desc = api_data['weather'][0]['description']
 hmdt = api_data['main']['humidity']
